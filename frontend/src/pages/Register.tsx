@@ -101,7 +101,6 @@ export default function Register() {
         )}
 
         <form onSubmit={handleSubmit}>
-          {/* Username */}
           <div style={{ marginBottom: "15px" }}>
             <input
               type="text"
@@ -114,7 +113,6 @@ export default function Register() {
             {errors.username && <p style={{ color: "red", fontSize: "14px" }}>{errors.username}</p>}
           </div>
 
-          {/* Email */}
           <div style={{ marginBottom: "15px" }}>
             <input
               type="email"
@@ -127,7 +125,6 @@ export default function Register() {
             {errors.email && <p style={{ color: "red", fontSize: "14px" }}>{errors.email}</p>}
           </div>
 
-          {/* Password */}
           <div style={{ marginBottom: "15px" }}>
             <input
               type="password"
@@ -140,7 +137,6 @@ export default function Register() {
             {errors.password && <p style={{ color: "red", fontSize: "14px" }}>{errors.password}</p>}
           </div>
 
-          {/* Confirm Password */}
           <div style={{ marginBottom: "15px" }}>
             <input
               type="password"

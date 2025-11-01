@@ -189,9 +189,6 @@ export default function Users() {
                   <div
                     style={{ display: "flex", justifyContent: "space-between" }}
                   >
-                    <button type="submit" style={btnStyle("#2ecc71")}>
-                      Save
-                    </button>
                     <button
                       type="button"
                       onClick={() => setShowModal(false)}
@@ -199,13 +196,15 @@ export default function Users() {
                     >
                       Cancel
                     </button>
+                    <button type="submit" style={btnStyle("#2ecc71")}>
+                      Save
+                    </button>
                   </div>
                 </form>
               </div>
             </div>
           )}
 
-          {/* User Table */}
           <table
             style={{
               width: "100%",

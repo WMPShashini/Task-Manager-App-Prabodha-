@@ -33,7 +33,6 @@ export default function Dashboard() {
     try {
       const token = localStorage.getItem("token");
 
-      // ✅ Fetch both tasks and summary
       const [taskRes, summaryRes] = await Promise.all([
         fetch("http://localhost:5000/api/tasks", {
           headers: { Authorization: `Bearer ${token}` },
@@ -46,7 +45,6 @@ export default function Dashboard() {
       const taskData = await taskRes.json();
       const summaryData = await summaryRes.json();
 
-      // ✅ Convert stage → status for frontend
       const formattedTasks = Array.isArray(taskData)
         ? taskData.map((t) => ({
             ...t,
@@ -73,7 +71,6 @@ export default function Dashboard() {
     }
   };
 
-  // ✅ Filter completed tasks by date range
   const filteredCompletedTasks = tasks.filter((t) => {
     if (t.status !== "completed") return false;
 
@@ -144,7 +141,6 @@ export default function Dashboard() {
             </div>
           )}
 
-          {/* ✅ Summary Cards */}
           <div
             style={{
               display: "grid",
@@ -177,7 +173,6 @@ export default function Dashboard() {
             ))}
           </div>
 
-          {/* ✅ Filter Dropdown */}
           <div style={{ marginBottom: "15px" }}>
             <label style={{ marginRight: "10px", fontWeight: 500 }}>
               Filter Completed Tasks:
@@ -200,7 +195,6 @@ export default function Dashboard() {
             </select>
           </div>
 
-          {/* ✅ Completed Task Cards */}
           <div
             style={{
               display: "grid",

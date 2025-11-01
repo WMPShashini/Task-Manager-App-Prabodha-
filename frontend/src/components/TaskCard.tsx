@@ -3,7 +3,7 @@ import React from "react";
 interface TaskCardProps {
   title: string;
   status: "completed" | "Not Started" | "in-progress";
-  progress: number;            // ✅ Add this line
+  progress: number;       
   assignee?: string;
   dueDate?: string;
   color?: string;

@@ -1,7 +1,6 @@
-/* Sidebar container */
 .sidebar {
   width: 250px;
-  background: #0802a8; /* Dark green primary */
+  background: #0802a8;
   color: white;
   height: 100vh;
   padding-top: 20px;
@@ -10,7 +9,6 @@
   box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Brand container */
 .brand-container {
   display: flex;
   align-items: center;
@@ -23,13 +21,11 @@
   color: white;
 }
 
-/* Brand title */
 .brand {
   font-weight: 700;
   color: white;
 }
 
-/* Navigation links */
 .sidebar nav {
   display: flex;
   flex-direction: column;
@@ -46,7 +42,6 @@
   font-weight: 500;
 }
 
-/* Hover and active styles */
 .sidebar-link:hover {
   background: rgba(255, 255, 255, 0.2);
 }
@@ -56,14 +51,12 @@
   font-weight: 600;
 }
 
-/* Text inside tab */
 .link-text {
   width: 100%;
   text-align: center;
 }
 
 
-/* Topbar */
 .topbar {
   background: white;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
@@ -73,7 +66,6 @@
   align-items: center;
 }
 
-/* Logout button */
 .logout-btn {
   background: #d32f2f;
   color: white;

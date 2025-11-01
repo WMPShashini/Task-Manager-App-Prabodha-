@@ -134,13 +134,10 @@ export default function Tasks() {
                       <td style={td}>{t.team || "-"}</td>
 
                       <td style={td}>
-  {t.assignedTo
-    ? typeof t.assignedTo === "object"
-      ? `${t.assignedTo.userId}`
-      : t.assignedTo
-    : "-"}
-</td>
-
+                          {t.assignedTo ? typeof t.assignedTo === "object"
+                                        ? `${t.assignedTo.userId}`
+                                            : t.assignedTo: "-"}
+                    </td>
 
                       <td style={td}>
                         {t.dueDate
@@ -199,7 +196,6 @@ export default function Tasks() {
         </div>
       </main>
 
-      {/* ✅ Task Modal */}
       {showModal && (
         <div style={overlay}>
           <div style={modalBox}>
@@ -218,7 +214,6 @@ export default function Tasks() {
   );
 }
 
-// ---------- Styles ----------
 const addBtn: React.CSSProperties = {
   background: "#4a90e2",
   color: "#fff",

@@ -2,7 +2,7 @@ import { useAuth } from "../../hooks/useAuth";
 import "./Layout.css";
 
 export default function Topbar() {
-  const { user, logout } = useAuth(); // assuming `user` contains logged-in user info
+  const { user, logout } = useAuth();
 
   return (
     <header className="topbar">

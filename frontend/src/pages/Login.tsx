@@ -76,7 +76,6 @@ export default function Login() {
 
           {error && <p style={{ color: "red", fontSize: 14 }}>{error}</p>}
 
-          {/* Forgot Password */}
           <div style={{ textAlign: "right", marginBottom: "15px" }}>
             <Link
               to="/forgot-password"
@@ -86,7 +85,6 @@ export default function Login() {
             </Link>
           </div>
 
-          {/* Login Button */}
           <button type="submit" style={loginBtn}>
             Login
           </button>
@@ -94,7 +92,6 @@ export default function Login() {
 
         <div style={divider}>or</div>
 
-        {/* Google and Facebook Login */}
         <div style={socialContainer}>
           <button onClick={() => loginWithProvider("Google")} style={googleBtn}>
             <FaGoogle style={{ marginRight: "8px" }} />
@@ -118,7 +115,6 @@ export default function Login() {
   );
 }
 
-// 🎨 Styles
 const containerStyle: React.CSSProperties = {
   display: "flex",
   height: "100vh",

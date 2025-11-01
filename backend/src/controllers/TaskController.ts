@@ -1,11 +1,10 @@
 import { Request, Response } from "express";
-// TaskController.js
 import Task from "../models/Task";
 
 export const getTasks = async (req: Request, res: Response) => {
   try {
     const tasks = await Task.find()
-      .populate("assignedTo", "userId name") // ✅ populate user data
+      .populate("assignedTo", "userId name")
       .sort({ createdAt: -1 });
 
     res.status(200).json(tasks);
@@ -15,9 +14,7 @@ export const getTasks = async (req: Request, res: Response) => {
   }
 };
 
-
-
-// ✅ Create a new task
+// Create a new task
 export const createTask = async (req: Request, res: Response) => {
   try {
     const newTask = new Task(req.body);
@@ -28,7 +25,7 @@ export const createTask = async (req: Request, res: Response) => {
   }
 };
 
-// ✅ Update a task
+// Update a task
 export const updateTask = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
@@ -46,7 +43,7 @@ export const updateTask = async (req: Request, res: Response) => {
   }
 };
 
-// ✅ Delete a task
+//Delete a task
 export const deleteTask = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
@@ -57,7 +54,7 @@ export const deleteTask = async (req: Request, res: Response) => {
   }
 };
 
-// ✅ Dashboard summary stats
+// Dashboard summary stats
 export const getTaskSummary = async (req: Request, res: Response) => {
   try {
     const tasks = await Task.find();

@@ -6,10 +6,10 @@ const taskSchema = new mongoose.Schema(
     description: { type: String },
     assignedTo: {
   type: mongoose.Schema.Types.ObjectId,
-  ref: "User", // ✅ must match the name in mongoose.model("User", UserSchema)
+  ref: "User", //must match the name in mongoose.model("User", UserSchema)
 },
 
-    // ✅ Add these fields
+    //Add these fields
     team: { type: String, default: "" },
     priority: { type: String, enum: ["Low", "Medium", "High"], default: "Medium" },
     stage: { type: String, enum: ["Not Started", "In progress", "Completed"], default: "Not Started" },

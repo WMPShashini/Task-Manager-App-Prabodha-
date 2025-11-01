@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 interface User {
   username: string;
   email: string;
-  // add other fields if needed
 }
 
 export function useAuth() {

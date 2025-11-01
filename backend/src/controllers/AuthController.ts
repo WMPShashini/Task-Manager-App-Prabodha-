@@ -3,7 +3,6 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import User from "../models/Auth";
 
-// REGISTER
 export const register = async (req: Request, res: Response) => {
   try {
     const { username, email, password, address } = req.body;
@@ -23,7 +22,6 @@ export const register = async (req: Request, res: Response) => {
   }
 };
 
-// LOGIN
 export const login = async (req: Request, res: Response) => {
   try {
     const { email, password } = req.body;
@@ -45,7 +43,6 @@ export const login = async (req: Request, res: Response) => {
   }
 };
 
-// RESET PASSWORD
 export const resetPassword = async (req: Request, res: Response) => {
   try {
     const { email, newPassword } = req.body;

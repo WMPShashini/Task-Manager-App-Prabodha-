@@ -22,6 +22,5 @@ const teamUserSchema = new Schema<ITeamUser>(
 );
 
 teamUserSchema.index({ userId: 1 }, { unique: true });
- // ensure unique index
 
 export default mongoose.model<ITeamUser>("TeamUser", teamUserSchema);
