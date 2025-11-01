@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    /* ===== Target & Module System ===== */
+    "target": "ES2020",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* ===== Type Checking ===== */
+    "strict": true,
+    "skipLibCheck": true,
+
+    /* ===== Node.js Environment ===== */
+    "types": ["node"],
+
+    /* ===== Project Structure ===== */
+    "rootDir": "src",
+    "outDir": "dist",
+
+    /* ===== Output ===== */
+    "sourceMap": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}
